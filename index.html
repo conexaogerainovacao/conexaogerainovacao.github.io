@@ -1,94 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conexão Gera Inovação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #1f1f1f;
-  color: #FFFFFF;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  text-align: center;
-  padding: 60px 20px 30px;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1f1f1f;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
 
-header h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  background: linear-gradient(90deg, #FFD700, #FF8C00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
 
-.mensagem {
-  text-align: center;
-  font-size: 1.2rem;
-  background: rgba(255, 215, 0, 0.1);
-  border-left: 5px solid #FFD700;
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-}
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.equipe h2, .whatsapp h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #FFD700;
-  margin-bottom: 30px;
-}
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-.membro {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.membro:hover {
-  box-shadow: 0 0 12px #FF8C00;
-  transform: translateY(-5px);
-}
-
-.membro img {
-  border: 3px solid #FFD700;
-}
-
-.whatsapp a {
-  background: #FF8C00;
-}
+    .mensagem {
+      text-align: center;
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 5px solid #FFD700;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
 
     form.formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-form.formulario input {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
-}
+    form.formulario input {
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
 
-form.formulario button {
-  background-color: #FFD700;
-  border: none;
-  color: black;
-  padding: 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    form.formulario button {
+      background-color: #FFD700;
+      border: none;
+      color: black;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-form.formulario button:hover {
-  background-color: #FF8C00;
-  color: white;
-}
+    form.formulario button:hover {
+      background-color: #FF8C00;
+      color: white;
+    }
 
-</style>
+    .equipe, .whatsapp-container {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 40px 20px;
+      margin-bottom: 40px;
+    }
+
+    .equipe h2, .whatsapp-container h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #FFD700;
+      margin-bottom: 30px;
+    }
+
+    .membros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .membro {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 220px;
+      text-align: center;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .membro:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 8px 20px rgba(255, 140, 0, 0.5);
+    }
+
+    .membro img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #FFD700;
+      margin-bottom: 12px;
+    }
+
+    .membro strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: #FFFFFF;
+    }
+
+    .membro p {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #CCCCCC;
+    }
+
+    .whatsapp-container {
+      text-align: center;
+    }
+
+    .whatsapp-container a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FF8C00;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .3s ease, box-shadow .3s ease;
+    }
+
+    .whatsapp-container a:hover {
+      background: #FFD700;
+      color: #1f1f1f;
+      box-shadow: 0 4px 15px rgba(255,215,0,0.5);
+    }
+
+    @media (max-width: 600px) {
+      .membro img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .whatsapp-container a {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -97,46 +184,50 @@ form.formulario button:hover {
   </header>
 
   <main>
-    <p class="mensagem">Parabéns por ter chegado até aqui! Preencha o formulário abaixo com seus dados para concorrer aos prêmios!</p>
+    <p class="mensagem">
+      Parabéns por ter chegado até aqui! Preencha o formulário abaixo com seus dados para concorrer aos prêmios.
+    </p>
 
-    <div class="formulario">
-  <form action="https://formspree.io/f/xanboblo" method="POST" class="formulario">
-  <label>Nome:<br><input type="text" name="nome" required></label><br><br>
-  <label>Email:<br><input type="email" name="email" required></label><br><br>
-  <label>WhatsApp:<br><input type="text" name="whatsapp" required></label><br><br>
-  <button type="submit">Enviar</button>
-</form>  </div>
+    <!-- Formulário usando Formspree -->
+    <form action="https://formspree.io/f/SEUCODIGO" method="POST" class="formulario">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="text" name="whatsapp" placeholder="Seu WhatsApp" required />
+      <button type="submit">Enviar</button>
+    </form>
 
     <section class="equipe">
       <h2>Equipe Organizadora do Desafio</h2>
       <div class="membros">
         <div class="membro">
-          <img src="foto1.jpg" alt="Nome da Pessoa 1">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHiFlbw2lZLrA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724954506466?e=1756339200&v=beta&t=TJ9bMwSYugP0iPq2v9btFOBMKC_xWgBsq5Ijxu2Wg-o" alt="Roberta Albano">
           <strong>Roberta Albano</strong>
-          <p>"Frase inspiradora sobre ela."</p>
+          <p>"Conectar pessoas e ideias é o que move a inovação."</p>
         </div>
         <div class="membro">
-          <img src="foto2.jpg" alt="Nome da Pessoa 2">
-          <strong>Ursula Riberio</strong>
-          <p>"Outra frase bacana aqui."</p>
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHlvv4GlTMRCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693411485336?e=1756339200&v=beta&t=-b_T1iSMztJCOJ1rX97ZuqfeVG8qK78McdHDWe3qitU" alt="Ursula Ribeiro">
+          <strong>Ursula Ribeiro</strong>
+          <p>"Transformar desafios em oportunidades é a nossa missão."</p>
         </div>
         <div class="membro">
-          <img src="foto3.jpg" alt="Nome da Pessoa 3">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQG9zG40BhyLmA/profile-displayphoto-shrink_800_800/B4DZS3lCt7GcAc-/0/1738246729104?e=1756339200&v=beta&t=UagbR56wFP58V5f2TT61m8itBv8jcvbLZm0fHZKBwYI" alt="Henrique de Andrade">
           <strong>Henrique de Andrade</strong>
-          <p>"Mais uma frase sobre a pessoa."</p>
+          <p>"Tecnologia é ponte — entre sonhos e realizações."</p>
         </div>
         <div class="membro">
-          <img src="foto4.jpg" alt="Nome da Pessoa 4">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQH7kGtCTEa-RQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1681766149837?e=1756339200&v=beta&t=zwfQdVQ1wYZXGQo_b5bcFPuc-r633F2BHgaPy-rkNfk" alt="Sylvestre Mergulhão">
           <strong>Sylvestre Mergulhão</strong>
-          <p>"Texto de apresentação breve."</p>
+          <p>"Criatividade e estratégia caminham juntas na inovação."</p>
         </div>
       </div>
     </section>
 
-    <div class="whatsapp">
+    <section class="whatsapp-container">
       <h2>Entre no Grupo de WhatsApp do Desafio!</h2>
-      <a href="https://chat.whatsapp.com/SEULINKAQUI" target="_blank">Entrar no Grupo</a>
-    </div>
+      <a href="https://chat.whatsapp.com/SEULINKAQUI" target="_blank">
+        Entrar no Grupo
+      </a>
+    </section>
   </main>
 
 </body>
