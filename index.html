@@ -59,6 +59,35 @@ header h1 {
 .whatsapp a {
   background: #FF8C00;
 }
+
+    form.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form.formulario input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+form.formulario button {
+  background-color: #FFD700;
+  border: none;
+  color: black;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form.formulario button:hover {
+  background-color: #FF8C00;
+  color: white;
+}
+
 </style>
 </head>
 <body>
@@ -71,9 +100,12 @@ header h1 {
     <p class="mensagem">Parabéns por ter chegado até aqui! Preencha o formulário abaixo com seus dados para concorrer aos prêmios!</p>
 
     <div class="formulario">
-      <!-- Substitua o conteúdo abaixo pelo embed do seu formulário (ex: Google Forms, Typeform, etc.) -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXEXEMPLO/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-    </div>
+  <form action="https://formspree.io/f/xanboblo" method="POST" class="formulario">
+  <label>Nome:<br><input type="text" name="nome" required></label><br><br>
+  <label>Email:<br><input type="email" name="email" required></label><br><br>
+  <label>WhatsApp:<br><input type="text" name="whatsapp" required></label><br><br>
+  <button type="submit">Enviar</button>
+</form>  </div>
 
     <section class="equipe">
       <h2>Equipe Organizadora do Desafio</h2>
